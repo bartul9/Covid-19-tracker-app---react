@@ -7,6 +7,7 @@ import VaccineCoverage from "./components/VaccineCoverage";
 import AppBar from "./components/AppBar";
 import SelectCountry from "./components/SelectCountry";
 import Chart from "./components/Chart";
+import VaccineDetails from "./components/VaccineDetails";
 
 import { inject } from "mobx-react";
 
@@ -22,6 +23,7 @@ const App = inject("store")(function App(props) {
       <CountsContainer />
       <Chart />
       <VaccineCoverage />
+      <VaccineDetails />
     </main>
   );
 });
