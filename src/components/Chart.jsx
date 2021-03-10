@@ -3,6 +3,8 @@ import { Line } from "react-chartjs-2";
 
 import axios from "axios";
 
+import Spinner from "./Spinner";
+
 import "./Chart.css";
 import { inject, observer } from "mobx-react";
 
@@ -15,28 +17,29 @@ const Chart = inject("store")(
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+      store.todos.error = "";
       const fetchWorldDaily = async () => {
         setLoading(true);
-        console.log(store.todos.selectedChart);
-        const worldDaily = await axios
-          .get(
-            `https://disease.sh/v3/covid-19/historical/${store.todos.selectedChart}?lastdays=350`
-          )
-          .then((res) => {
-            setLoading(false);
-            return res.data;
-          });
-        console.log(worldDaily.timeline);
-
-        const dates = Object.keys(worldDaily.timeline.cases);
-        const infected = Object.values(worldDaily.timeline.cases);
-        const deathsData = Object.values(worldDaily.timeline.deaths);
-        const recovered = Object.values(worldDaily.timeline.recovered);
-
-        setDates(dates);
-        setInfected(infected);
-        setDeaths(deathsData);
-        setRecoverd(recovered);
+        try {
+          const worldDaily = await axios
+            .get(
+              `https://disease.sh/v3/covid-19/historical/${store.todos.selectedChart}?lastdays=350`
+            )
+            .then((res) => {
+              setLoading(false);
+              return res.data;
+            });
+          const dates = Object.keys(worldDaily.timeline.cases);
+          const infected = Object.values(worldDaily.timeline.cases);
+          const deathsData = Object.values(worldDaily.timeline.deaths);
+          const recovered = Object.values(worldDaily.timeline.recovered);
+          setDates(dates);
+          setInfected(infected);
+          setDeaths(deathsData);
+          setRecoverd(recovered);
+        } catch {
+          store.todos.error = "No Data";
+        }
       };
 
       fetchWorldDaily();
@@ -75,7 +78,7 @@ const Chart = inject("store")(
           }}
         />
       ) : (
-        <h2>Loading</h2>
+        <h2 className="Chart-h2">{store.todos.error || <Spinner />}</h2>
       );
 
     return <div className="container"> {lineChart}</div>;
