@@ -1,0 +1,42 @@
+.AppBar {
+  width: 70%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(83, 83, 83);
+  justify-content: center;
+  transition: 500ms;
+  border-bottom: 3px solid rgb(74, 191, 238);
+  border-radius: 15px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0px;
+  width: 90%;
+  color: white;
+  background-color: rgb(74, 191, 238, 0.97);
+  border: none;
+  border-radius: 0;
+}
+
+.AppBar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.AppBar ul li {
+  margin: 10px;
+}
+
+@media (max-width: 770px) {
+  .sticky {
+    width: 100%;
+  }
+}
