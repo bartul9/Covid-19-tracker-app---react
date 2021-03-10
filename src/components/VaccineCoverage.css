@@ -1,0 +1,17 @@
+.VaccineCoverage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgb(74, 191, 238);
+}
+
+@media only screen and (max-width: 770px) {
+  .VaccineCoverage {
+    width: 100%;
+  }
+}
