@@ -1,13 +1,51 @@
 .Header {
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 400px;
   justify-content: center;
+  justify-content: space-evenly;
   height: 20vh;
-  /* background-color: rgb(200, 231, 243); */
+  margin-top: 10px;
 }
 
-.Header img {
-  width: 250px;
+.Header-span-c {
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(37, 37, 37);
+}
+
+.Header-span-vid {
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(37, 37, 37);
+}
+
+/* Rottating img */
+
+.image {
+  position: relative;
+  top: 32px;
+  left: 30px;
+  width: 70px;
   height: auto;
+  margin: -60px 0 0 -60px;
+  -webkit-animation: spin 6s linear infinite;
+  -moz-animation: spin 6s linear infinite;
+  animation: spin 6s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
