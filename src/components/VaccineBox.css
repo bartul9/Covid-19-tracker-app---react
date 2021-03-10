@@ -1,0 +1,33 @@
+.VaccineBox {
+  width: 100%;
+  border-bottom: 5px solid #32cd32;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(74, 191, 238, 0.075);
+}
+
+.VaccineBox-details {
+  padding: 0rem 1rem 1rem 1rem;
+  color: rgb(74, 191, 238);
+}
+
+.VaccineBox-table {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-left: none;
+  width: 100%;
+}
+
+.VaccineBox-table span {
+  padding: 0.5rem 0rem;
+  width: 96%;
+  color: rgb(74, 191, 238);
+}
+.VaccineBox span span {
+  font-style: italic;
+  color: #32cd32;
+  border: none;
+}
