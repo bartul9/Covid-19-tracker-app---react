@@ -1,3 +1,8 @@
 .SelectCountry {
   margin-top: 30px;
 }
+
+.SelectCountry select {
+  border: 1px solid rgb(74, 191, 238);
+  color: rgb(82, 82, 82);
+}
