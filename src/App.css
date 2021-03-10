@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  width: 90%;
+  border-left: 2px solid rgb(74, 191, 238);
+  border-right: 2px solid rgb(74, 191, 238);
+}
+
+@media only screen and (max-width: 770px) {
+  .App {
+    width: 100%;
+    border: none;
+  }
+}
