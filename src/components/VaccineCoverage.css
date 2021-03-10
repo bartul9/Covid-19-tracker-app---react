@@ -7,7 +7,17 @@
   background-color: rgb(255, 255, 255);
   margin-top: 30px;
   padding-top: 30px;
-  border-top: 1px solid rgb(74, 191, 238);
+}
+
+.VaccineCoverage-doses {
+  color: rgb(82, 82, 82);
+  font-size: 1rem;
+}
+
+.VaccineCoverage-h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(82, 82, 82);
 }
 
 @media only screen and (max-width: 770px) {
