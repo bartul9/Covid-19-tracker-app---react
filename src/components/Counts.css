@@ -1,0 +1,30 @@
+.Counts {
+  width: 25%;
+  height: auto;
+  background-color: white;
+  padding: 15px;
+  margin: 0px;
+}
+
+.Counts h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: rgb(36, 36, 36);
+}
+
+.Counts p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(82, 82, 82);
+}
+
+.Counts h3 {
+  color: rgb(65, 65, 65);
+}
+
+@media (max-width: 533px) {
+  .Counts {
+    width: 90%;
+    padding: 15px;
+  }
+}
