@@ -1,6 +1,10 @@
 import { observable } from "mobx";
 
-import axios from "axios";
+import { configure } from "mobx";
+
+configure({
+  enforceActions: "never",
+});
 
 class Store {
   todos = observable({
@@ -8,6 +12,7 @@ class Store {
     selectedCountry: "",
     countriesData: [],
     allCountries: [],
+    error: "",
   });
 }
 
