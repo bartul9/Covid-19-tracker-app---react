@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Counts from "./Counts";
 import LastUpdate from "./LastUpdate";
+import Spinner from "./Spinner";
 
 import "./CountsContainer.css";
 import { inject, observer } from "mobx-react";
@@ -9,7 +10,7 @@ import { inject, observer } from "mobx-react";
 class CountsContainer extends Component {
   render() {
     return !this.props.store.todos.countriesData.lastUpdate ? (
-      <h1 className="CountsContainer-loading">Loading...</h1>
+      <Spinner />
     ) : (
       <section className="CountsContainer">
         {" "}
