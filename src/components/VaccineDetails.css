@@ -1,0 +1,22 @@
+.VaccineDetails {
+  border-top: 3px solid rgb(74, 191, 238);
+  margin-top: 30px;
+  padding-top: 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.VaccineDetails h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(74, 191, 238);
+}
+
+@media (max-width: 770px) {
+  .VaccineDetails {
+    width: 100%;
+  }
+}
