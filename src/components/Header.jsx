@@ -2,14 +2,16 @@ import React, { Component } from "react";
 
 import "./Header.css";
 
-import { image } from "../images/index";
+import { rotating } from "../images/index";
 
 export default class Header extends Component {
   render() {
     return (
       <header className="Header">
-        <img src={image} alt="corona-img" />
-        {/* <h1>COVID - 19</h1> */}
+        {" "}
+        <span className="Header-span-c">C</span>
+        <img className="image" src={rotating} alt="corona-img" />{" "}
+        <span className="Header-span-vid">VID - 19</span>
       </header>
     );
   }
