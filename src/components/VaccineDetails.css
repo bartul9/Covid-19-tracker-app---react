@@ -1,5 +1,5 @@
 .VaccineDetails {
-  border-top: 3px solid rgb(74, 191, 238);
+  border-top: 2px solid rgb(74, 191, 238);
   margin-top: 30px;
   padding-top: 30px;
   width: 90%;
@@ -13,6 +13,11 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: rgb(74, 191, 238);
+}
+
+#VaccineDetails-h2 {
+  position: relative;
+  bottom: 80px;
 }
 
 @media (max-width: 770px) {
