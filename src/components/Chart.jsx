@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import { Line } from "react-chartjs-2";
 
 import axios from "axios";
@@ -6,6 +7,7 @@ import axios from "axios";
 import Spinner from "./Spinner";
 
 import "./Chart.css";
+
 import { inject, observer } from "mobx-react";
 
 const Chart = inject("store")(
