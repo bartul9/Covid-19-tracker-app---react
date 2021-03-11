@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Counts.css";
 
-function Counts(props) {
+const Counts = (props) => {
   return (
     <article
       style={{
@@ -12,6 +12,8 @@ function Counts(props) {
       }}
       className="Counts"
     >
+      {" "}
+      <img src={props.icon} alt="icon" />
       <h2
         style={{
           color: `${props.colorStyle}`,
@@ -23,6 +25,6 @@ function Counts(props) {
       <p>Number of {props.text} COVID-19</p>
     </article>
   );
-}
+};
 
 export default Counts;
