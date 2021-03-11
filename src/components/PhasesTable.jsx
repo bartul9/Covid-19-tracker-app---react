@@ -6,7 +6,7 @@ import Spinner from "./Spinner";
 
 import "./PhasesTable.css";
 
-export default function PhasesTable() {
+const PhasesTable = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -42,4 +42,5 @@ export default function PhasesTable() {
       </table>
     </div>
   );
-}
+};
+export default PhasesTable;
