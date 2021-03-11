@@ -4,12 +4,14 @@ import VaccineData from "./VaccineData";
 
 import "./VaccineDetails.css";
 
-export default function VaccineDetails() {
+const VaccineDetails = () => {
   return (
     <section className="VaccineDetails">
+      <span id="VaccineDetails-h2"></span>
       <h2>Vaccine Details</h2>
       <PhasesTable />
       <VaccineData />
     </section>
   );
-}
+};
+export default VaccineDetails;
