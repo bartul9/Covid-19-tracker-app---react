@@ -8,12 +8,11 @@ import AppBar from "./components/AppBar";
 import SelectCountry from "./components/SelectCountry";
 import Chart from "./components/Chart";
 import VaccineDetails from "./components/VaccineDetails";
-
-import { inject } from "mobx-react";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
-const App = inject("store")(function App(props) {
+const App = function App() {
   return (
     <main className="App">
       {" "}
@@ -24,8 +23,9 @@ const App = inject("store")(function App(props) {
       <Chart />
       <VaccineCoverage />
       <VaccineDetails />
+      <Footer />
     </main>
   );
-});
+};
 
 export default App;
