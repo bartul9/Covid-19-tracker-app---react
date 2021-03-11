@@ -5,7 +5,10 @@
   padding: 15px;
   margin: 0px;
 }
-
+.Counts img {
+  width: 45px;
+  float: right;
+}
 .Counts h2 {
   font-weight: 500;
   font-size: 1.2rem;
