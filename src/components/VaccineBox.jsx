@@ -2,8 +2,7 @@ import React from "react";
 
 import "./VaccineBox.css";
 
-export default function VaccineBox(props) {
-  console.log(props);
+const VaccineBox = (props) => {
   const {
     candidate,
     details,
@@ -37,4 +36,5 @@ export default function VaccineBox(props) {
       ></span>
     </div>
   );
-}
+};
+export default VaccineBox;
