@@ -1,2 +1,10 @@
 export { default as image } from "./image.png";
 export { default as rotating } from "./rotating.png";
+export { default as totop } from "./totop.png";
+export { default as glove } from "./glove.png";
+export { default as mask } from "./mask.png";
+export { default as distancing } from "./social-distancing.png";
+export { default as handgel } from "./hand-gel.png";
+export { default as recoveredImg } from "./recovered.png";
+export { default as death } from "./death.png";
+export { default as cough } from "./cough.png";
