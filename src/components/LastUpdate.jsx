@@ -4,21 +4,25 @@ import { inject, observer } from "mobx-react";
 
 import "./LastUpdate.css";
 
-function LastUpdate(props) {
-  return (
-    <div className="LastUpdate">
-      <h1>{props.store.todos.selectedChart}</h1>
-      <h5>Last Update:</h5>
-      <h4>
-        {props.store.todos.countriesData.lastUpdate &&
-          props.store.todos.countriesData.lastUpdate.slice(0, 10) +
-            " " +
-            props.store.todos.countriesData.lastUpdate.slice(11, -5) +
-            " " +
-            "UTC"}
-      </h4>
-    </div>
-  );
-}
+const LastUpdate = inject("store")(
+  observer(({ store }) => {
+    const { selectedChart } = store.todos;
+    const { lastUpdate } = store.todos.countriesData;
+    return (
+      <div className="LastUpdate">
+        <h1>{selectedChart}</h1>
+        <h5>Last Update:</h5>
+        <h4>
+          {lastUpdate &&
+            lastUpdate.slice(0, 10) +
+              " " +
+              lastUpdate.slice(11, -5) +
+              " " +
+              "UTC"}
+        </h4>
+      </div>
+    );
+  })
+);
 
-export default inject("store")(observer(LastUpdate));
+export default LastUpdate;
