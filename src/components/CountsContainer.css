@@ -21,6 +21,11 @@
   border: 1px solid rgb(150, 150, 150);
 }
 
+#countries-href {
+  position: relative;
+  bottom: 30px;
+}
+
 @media (max-width: 533px) {
   .CountsContainer {
     justify-content: center;
