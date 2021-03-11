@@ -6,7 +6,7 @@ import VaccineBox from "./VaccineBox";
 
 import "./VaccineData.css";
 
-export default function VaccineData() {
+const VaccineData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function VaccineData() {
     };
     fetchData();
   }, []);
-  console.log(data);
+
   return (
     <div className="VaccineData">
       {data.map((vaccine) => (
@@ -24,4 +24,5 @@ export default function VaccineData() {
       ))}
     </div>
   );
-}
+};
+export default VaccineData;
